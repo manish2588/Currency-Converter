@@ -32,7 +32,7 @@ const CurrencyConverter = () => {
 
   console.log(currencies);
 
-  // Conversion -> https://api.frankfurter.app/latest?amount=1&from=USD&to=INR
+  // Conversion -> https://api.frankfurter.app/latest?amount=1&from=USD&to=AUD
   const convertCurrency = async () => {
     if (!amount) return;
     setConverting(true);
