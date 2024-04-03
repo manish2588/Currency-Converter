@@ -11,7 +11,7 @@ const CurrencyConverter = () => {
   const [convertedAmount, setConvertedAmount] = useState(null);
   const [converting, setConverting] = useState(false);
   const [favorites, setFavorites] = useState(
-    JSON.parse(localStorage.getItem("favorites")) || ["INR", "EUR"]
+    JSON.parse(localStorage.getItem("favorites")) || ["AUD", "EUR"]
   );
 
   // Currencies -> https://api.frankfurter.app/currencies
@@ -39,6 +39,7 @@ const CurrencyConverter = () => {
     try {
       const res = await fetch(
         `https://api.frankfurter.app/latest?amount=${amount}&from=${fromCurrency}&to=${toCurrency}`
+        
       );
       const data = await res.json();
 
